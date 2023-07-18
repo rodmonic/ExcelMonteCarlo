@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui" onLoad="OnLoad">
+  <ribbon>
+    <tabs>
+      <tab id="campagna" label="Campagna" visible="1">
+        <group id="monteCarlo" label="Monte Carlo" visible="1">
+          <button id="generateResults" label="Generate Results" imageMso="AccessRefreshAllLists" size="large" onAction="OnActionButton" />
+          <dropDown id="dropDownIterations" label ="Iterations" getSelectedItemID="GetSelectedItemID" onAction="OnActionDropDown">
+            <item id="ID100" label="100" />
+            <item id="ID1000" label="1000" />
+            <item id="ID5000" label="5000" />
+            <item id="ID10000" label="10000" />
+            <item id="ID50000" label="50000" />
+            <item id="ID100000" label="100000" />
+          </dropDown>
+          <editBox id="seedEditBox" onChange="GetEditBoxText" label="enter seed value" sizeString="aaaaaaaaa" maxLength="9"/>
+        </group>
+      </tab>
+    </tabs>
+  </ribbon>
+</customUI>
